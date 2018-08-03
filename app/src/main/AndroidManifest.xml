@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+El archivo de manifiesto proporciona información esencial sobre tu aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la app.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.juangabrielgomila.counter">
+
+
+    <!--
+    android:allowBackup: Es para permitir que la aplicación participe en la infraestructura de respaldo o restauración. Si este atributo se establece en falso, nunca se realizará una copia de seguridad o restauración de la aplicación, ni siquiera mediante una copia de seguridad del sistema completo que, de lo contrario, haría que todos los datos de la aplicación se guardaran mediante adb. El valor predeterminado de este atributo es verdadero.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+    <!--
+    activity android:name Nombre de la clase que implementa a la actividad; una subclase de Activity. El valor del atributo debe ser un nombre de clase completamente calificado.
+    -->
+        <activity android:name=".MainActivity">
+
+            <!--
+            Especifica los tipos de intentos a los que una actividad, servicio o receptor de difusión puede responder. Un filtro de intención declara las capacidades de su componente principal: qué puede hacer una actividad o servicio y qué tipos de transmisiones puede manejar un receptor.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+    <!--
+    Concluye manifiesto.
+    -->

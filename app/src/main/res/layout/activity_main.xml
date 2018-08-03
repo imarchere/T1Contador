@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+    Su principal característica es que los widgets que estén dentro de este contenedor basarán su posición en relación con los otros elementos.
+    android:layout_height: Especifica la altura básica de la vista.
+    android:layout_width: Especifica el ancho básico de la vista.
+    android:background: Cambia el color o fondo del layout.
+    android:orientation: Cambia la orientación del layout.
+    tools:context: Este atributo declara a qué actividad está asociada esta disposición de forma predeterminada.
+    -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    android:orientation="vertical"
+    tools:context="com.juangabrielgomila.counter.MainActivity">
+
+    <!--
+     Los TextView (etiquetas de texto) se utilizan como medio de salida, es decir, para mostrar un determinado texto al usuario. Al igual que en el caso de los botones, el texto del control se establece mediante la propiedad android:text. A parte de esta propiedad, las etiquetas que definen su tamaño son las mínimas que debemos definir.
+    Para generalizar:
+    android:layout_alignParentTop: Indica al widget que su borde superior deberá estar alineado con el borde superior del contenedor.
+    android:layout_alignParentEnd: Si es verdadero, hace que el borde final de esta vista coincida con el borde final del elemento primario. -->
+    android:layout_alignParentStart	Si es verdadero, hace que el borde inicial de esta vista coincida con el borde de inicio del elemento primario.
+    -->
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_view_0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_view"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_add"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnGrow"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnAdd"
+        android:layout_below="@+id/btnAdd"
+        android:layout_marginTop="34dp"
+        android:text="@string/btn_grow"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnHide"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnGrow"
+        android:layout_centerVertical="true"
+        android:text="@string/btn_hide"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnTake"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnGrow"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:text="@string/btn_take"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnShrink"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnTake"
+        android:layout_alignTop="@+id/btnGrow"
+        android:text="@string/btn_shrink"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+    <!--
+    El Button (botón) es el botón más básico que podemos utilizar y normalmente contiene un simple texto. En el código se definió un botón con el texto asignando su propiedad android:text. Además de esta propiedad podríamos utilizar muchas otras como el color de fondo (android:background), estilo de fuente (android:typeface), color de fuente (android:textcolor), tamaño de fuente (android:textSize), etc.
+    -->
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnShrink"
+        android:layout_alignTop="@+id/btnHide"
+        android:text="@string/btn_reset"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+</RelativeLayout>

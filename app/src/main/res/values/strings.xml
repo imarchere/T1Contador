@@ -1,0 +1,25 @@
+    <!--
+    Un recurso de string ofrece strings de texto para tu aplicación con formato y estilo de texto opcionales*
+    -->
+<resources>
+    <!--
+    Este es el nodo raíz
+    -->
+
+
+    <!--
+    A partir de aquí se llaman las Cadenas creadas junto con sus botones correspondientes
+    -->
+    <string name="app_name">Counter</string>
+    <string name="text_view_0">0</string>
+    <string name="btn_add">+</string>
+    <string name="btn_grow">A+</string>
+    <string name="btn_hide">Ocultar</string>
+    <string name="btn_take">-</string>
+    <string name="btn_shrink">A-</string>
+    <string name="btn_reset">Reset</string>
+
+</resources>
+    <!--
+    Aquí finalizan los Resources
+    -->
